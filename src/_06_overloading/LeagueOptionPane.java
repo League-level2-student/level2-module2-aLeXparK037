@@ -27,8 +27,12 @@ public class LeagueOptionPane {
 		frame.add(panel);
 		loadImage("league.png");
 		frame.pack();
+		JLabel label = new JLabel();
+		panel.add(label);
+		label.setText(message);
+		
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
-		//frame.setLocationRelativeTo(null);
+		frame.setLocationRelativeTo(null);
 	}
 	
 	// 3. Call this method in the Runner class
