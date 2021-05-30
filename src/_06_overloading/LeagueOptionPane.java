@@ -25,11 +25,10 @@ public class LeagueOptionPane {
 		frame.setVisible(true);
 		JPanel panel = new JPanel();
 		frame.add(panel);
-		loadImage("league.png");
-		frame.pack();
-		JLabel label = new JLabel();
+		JLabel label = new JLabel(loadImage("league.png"));
 		panel.add(label);
 		label.setText(message);
+		frame.pack();
 		
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
 		frame.setLocationRelativeTo(null);
@@ -40,9 +39,30 @@ public class LeagueOptionPane {
 
 	// 4. Create another showMessageDialog() method that lets us also choose the Message and Title 
 	//    2 String parameters (one for the message and one for the title)
-	
+	public static void showMessageDialog(String title, String message) {
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		JLabel label = new JLabel(loadImage("league.png"));
+		panel.add(label);
+		label.setText(message);
+		frame.setTitle(title);
+		frame.pack();
+		
+	}
 	// 5. Call this method in the Runner class
-	
+	public static void showMessageDialog(String title, String message, String fileName) {
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+		JPanel panel = new JPanel();
+		frame.add(panel);
+		JLabel label = new JLabel(loadImage(fileName));
+		panel.add(label);
+		label.setText(message);
+		frame.setTitle(title);
+		frame.pack();
+	}
 	
 	// 6. Create another showMessageDialog() method that lets us choose the Message, Title, and Image
 	//    3 String parameters (one for the message, one for the title, and one for the fileName)
