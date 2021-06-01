@@ -26,7 +26,7 @@ int foodX;
 int foodY;
 int direction = UP;
 int foodEaten = 0;
-
+ArrayList <Segment> tail = new ArrayList<Segment>();
 
 
 //*
@@ -86,7 +86,8 @@ void drawSnake() {
 
 void drawTail() {
   //Draw each segment of the tail 
-
+    fill(#329D2B);
+rect(10,10);
 }
 
 void manageTail() {
