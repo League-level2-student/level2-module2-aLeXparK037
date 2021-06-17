@@ -101,7 +101,7 @@ void manageTail() {
   checkTailCollision();
   drawTail();
   tail.add(new Segment(head.x,head.y));
-  tail.remove(tail.size()-1);
+  tail.remove(0);
   
 }
 
